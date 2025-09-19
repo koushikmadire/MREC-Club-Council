@@ -10,7 +10,7 @@ const Logo = () => {
           <img
             className="logo"
             alt="logo"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFJwFN7MZ4YmxE2NbnsMKaXG-I0VgtMyFdpwc8Cr5PLa0EwC7dZiaktR0kGfzKktfiexg&usqp=CAU"
+            src="https://mrec.ac.in/Images/MREC_logo.png"
           />
         </div>
       </div>

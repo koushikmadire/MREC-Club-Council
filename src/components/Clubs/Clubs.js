@@ -73,8 +73,11 @@ const Clubs = () => {
   return (
     <div>
       <CategorySection category="TECHNICAL" clubs={clubList} />
-      <CategorySection category="CULTURAL" clubs={clubList} />
-      <CategorySection category="AFFINITY" clubs={clubList} />
+      <CategorySection category="DANCE" clubs={clubList} />
+      <CategorySection category="PHOTOGRAPY" clubs={clubList} />
+      <CategorySection category="MUSIC" clubs={clubList} />
+      <CategorySection category="ARTS" clubs={clubList} />
+      <CategorySection category="STREETCAUSE" clubs={clubList} />
     </div>
   );
 };
