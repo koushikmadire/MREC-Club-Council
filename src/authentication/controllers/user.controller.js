@@ -1,5 +1,5 @@
 const { User } = require("../../../mongo.js");
-const bcrypt = require("bcryptjs");``
+const bcrypt = require("bcryptjs"); ``
 const generateTokenAndSetCookie = require("../utils/generateToken.js");
 
 const signup = async (req, res) => {
@@ -10,15 +10,12 @@ const signup = async (req, res) => {
     if (existingUser) {
       return res.status(400).json({ error: "Username already taken" });
     }
-    
+
     const existingId = await User.findOne({ studentId });
     if (existingId) {
       return res.status(400).json({ error: "ID already taken" });
     }
-    const idRegex = new RegExp("^[bB]\\d{6}$");
-    if (!idRegex.test(studentId)) {
-      return res.status(400).json({ error: "Invalid Student ID" });
-    }
+    // Accept any studentId (no restriction)
 
     const emailRegex = new RegExp("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$");
     if (!emailRegex.test(email)) {
@@ -29,7 +26,7 @@ const signup = async (req, res) => {
     if (existingEmail) {
       return res.status(400).json({ error: "Email already taken" });
     }
- 
+
     if (password.length < 6) {
       return res.status(400).json({ error: "Password length is too short" });
     }
@@ -83,7 +80,7 @@ const login = async (req, res) => {
     generateTokenAndSetCookie(user._id, res);
 
     res.send(user);
-    
+
 
   } catch (error) {
     console.log("Error in Login controller", error);

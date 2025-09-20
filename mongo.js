@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const uri =
-  "mongodb+srv://kavach:kavach123@cluster0.t0v6c.mongodb.net/club_council?retryWrites=true&w=majority&appName=Cluster0";
+  "mongodb+srv://koushikmadire039_db_user:koushik%40039@cluster0.pvesypm.mongodb.net/mreccouncil?retryWrites=true&w=majority&appName=Cluster0";
 
 mongoose
   .connect(uri)
@@ -127,9 +127,9 @@ const userSchema = mongoose.Schema(
       type: String,
       default: "https://shorturl.at/JjmV9",
     },
-    isSuperAdmin:{
-      type:Boolean,
-      default:false,
+    isSuperAdmin: {
+      type: Boolean,
+      default: false,
     },
     clubsIn: [
       {
