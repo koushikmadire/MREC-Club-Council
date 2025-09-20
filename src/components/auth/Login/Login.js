@@ -13,7 +13,7 @@ function Login() {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  const {login} = useAuth();
+  const { login } = useAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,7 +25,7 @@ function Login() {
       };
       setLoading(true);
       const { data } = await axios.post(
-        "http://localhost:8005/api/users/login",
+        "https://mrec-club-council.onrender.com/api/users/login",
         {
           username,
           password,
@@ -47,11 +47,11 @@ function Login() {
       <div className={styles.login_form_container}>
         <div className={styles.login_left}>
           <div className={styles.logo_title_container}>
-              <img
-                className="w-20"
-                src="https://i.ibb.co/nk1062c/club-Council-light-logo-no-BG.png"
-                alt="clubCouncil-logo"
-              />
+            <img
+              className="w-20"
+              src="https://i.ibb.co/nk1062c/club-Council-light-logo-no-BG.png"
+              alt="clubCouncil-logo"
+            />
             <h1 className={styles.login_title}>Login</h1>
           </div>
           {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}

@@ -3,7 +3,7 @@ const images = async () => {
   let imagesList = [];
   // console.log("In Utils Images");
   try {
-    const response = await axios.get("http://localhost:8005/get-images");
+    const response = await axios.get("https://mrec-club-council.onrender.com/get-images");
     imagesList = response.data;
   } catch (e) {
     console.log(e);

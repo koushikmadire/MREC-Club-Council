@@ -16,7 +16,7 @@ function Register() {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  const {login} = useAuth();
+  const { login } = useAuth();
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (password !== confirmPassword) {
@@ -31,7 +31,7 @@ function Register() {
       };
       setLoading(true);
       const { data } = await axios.post(
-        "http://localhost:8005/api/users/signup",
+        "https://mrec-club-council.onrender.com/api/users/signup",
         {
           username,
           email,
