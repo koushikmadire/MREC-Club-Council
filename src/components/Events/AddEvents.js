@@ -24,7 +24,7 @@ const AddEvents = () => {
     // Fetch club details when the component mounts
     const fetchClubDetails = async () => {
       try {
-        const response = await axios.get(`https://mrec-club-council.onrender.com/clubProfile?clubId=${id}`);
+        const response = await axios.get(`http://localhost:8005/clubProfile?clubId=${id}`);
         const clubData = response.data[0];
         setClubName(clubData.clubName);
       } catch (error) {
@@ -88,7 +88,7 @@ const AddEvents = () => {
     setErrorMessage(false);
     try {
       const res = await axios.post(
-        `https://mrec-club-council.onrender.com/add-event/${id}`,
+        `http://localhost:8005/add-event/${id}`,
         eventData
       );
       console.log(res);

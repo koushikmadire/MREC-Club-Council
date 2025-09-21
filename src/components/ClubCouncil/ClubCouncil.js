@@ -10,7 +10,7 @@ const Logo = () => {
           <img
             className="logo"
             alt="logo"
-            src="https://mrec.ac.in/Images/MREC_logo.png"
+            src="http://localhost:8005ec.ac.in/Images/MREC_logo.png"
           />
         </div>
       </div>

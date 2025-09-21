@@ -8,9 +8,12 @@ const userRoutes = require("./src/authentication/routes/user.routes");
 const app = express();
 const { User } = require("./mongo");
 
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors(
+
+));
 app.use(bodyParser.json());
 app.use(cookieParser());
 

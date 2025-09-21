@@ -31,7 +31,7 @@ function Register() {
       };
       setLoading(true);
       const { data } = await axios.post(
-        "https://mrec-club-council.onrender.com/api/users/signup",
+        "http://localhost:8005/api/users/signup",
         {
           username,
           email,

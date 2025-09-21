@@ -2,7 +2,7 @@ import axios from "axios";
 const specificEvent = async (id) => {
   let specificEventList = [];
   try {
-    const response = await axios.get(`https://mrec-club-council.onrender.com/all-events/${id}`);
+    const response = await axios.get(`http://localhost:8005/all-events/${id}`);
     specificEventList = response.data;
   } catch (e) {
     return specificEventList;

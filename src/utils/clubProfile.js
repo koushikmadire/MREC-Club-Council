@@ -5,9 +5,9 @@ const clubProfile = async ({ clubId, clubName }) => {
   try {
     let url;
     if (clubId) {
-      url = `https://mrec-club-council.onrender.com/clubProfile?clubId=${clubId}`;
+      url = `http://localhost:8005/clubProfile?clubId=${clubId}`;
     } else if (clubName) {
-      url = `https://mrec-club-council.onrender.com/clubProfile?clubName=${clubName}`;
+      url = `http://localhost:8005/clubProfile?clubName=${clubName}`;
     } else {
       throw new Error("Missing parameterss: clubId or clubName");
     }

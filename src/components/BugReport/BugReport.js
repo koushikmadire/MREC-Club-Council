@@ -18,7 +18,7 @@ const BugReport = () => {
 
     try {
       const response = await axios.post(
-        "https://mrec-club-council.onrender.com/send-email",
+        "http://localhost:8005/send-email",
         data
       );
 

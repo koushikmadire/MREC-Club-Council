@@ -5,7 +5,7 @@ const clubEvents = async (name) => {
   let clubEventsList = [];
   try {
     const response = await axios.get(
-      `https://mrec-club-council.onrender.com/club-events?clubName=${clubName}`
+      `http://localhost:8005/club-events?clubName=${clubName}`
     );
     clubEventsList = await response.data;
     return clubEventsList;
